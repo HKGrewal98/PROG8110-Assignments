@@ -17,10 +17,6 @@ app.get("/users/:uname", (req, res) => {
 
 let allOrders = []
 
-app.get('/orders', (req, res) => {
-    return res.status(200).json(allOrders)
-})
-
 
 let oOrders = {}; // id --> order
 let welcomeState = {}
@@ -139,6 +135,6 @@ function generateUserReceipt(userId){
 
 }
 
-var port = process.env.PORT || parseInt(process.argv.pop()) || 8080;
+var port = process.env.PORT || parseInt(process.argv.pop()) || 3002;
 
 app.listen(port, () => console.log('Example app listening on port ' + port + '!'));
